@@ -1,0 +1,12 @@
+.navbar-nav {
+    margin-left: auto;
+  }
+  .bd {
+    background-color: #77b4d4;
+  }
+.service-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}

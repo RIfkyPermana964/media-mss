@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafa.Net</title>
+    <link rel="stylesheet" href="../aset/style1.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bd">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PT Media Solusi Sukses</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.php">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="daftarpaket.php">Paket wifi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="layanan.php">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pelanggan.php">Pelanggan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">Kontak</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" onsubmit="searchFunction(event)">
+                <input class="form-control mr-sm-2" type="search" placeholder="Cari Paket Wifi" aria-label="Search" id="searchInput">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../aset/Frame 1.png" class="img-fluid" alt="vektor">
+            </div>
+            <div class="col-md-6">
+                <h2>Internet Service Provider</h2>
+                <p>Solusi Internet cepat dan terbaik untuk anda dan keluarga.</p>
+                <a href="../pelanggan/pelanggan.php" class="btn btn-primary">Daftar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function searchFunction(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+            if (searchInput.includes("beranda") || searchInput.includes("home")) {
+                window.location.href = "home.php";
+            } else if (searchInput.includes("paket wifi") || searchInput.includes("daftar paket")) {
+                window.location.href = "daftarpaket.php";
+            } else if (searchInput.includes("layanan")) {
+                window.location.href = "layanan.php";
+            } else if (searchInput.includes("pelanggan")) {
+                window.location.href = "pelanggan.php";
+            } else if (searchInput.includes("kontak") || searchInput.includes("contact")) {
+                window.location.href = "contact.php";
+            } else {
+                alert('Halaman tidak ditemukan.');
+            }
+        }
+    </script>
+</body>
+</html>
